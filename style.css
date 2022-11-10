@@ -1,0 +1,95 @@
+:root {
+    font-size: 62.5%;
+
+    /* colors */
+    --bg-color: #121214;
+    --text-color: #ffffff;
+
+    --base-color: 194;
+    --primary-color: hsl(var(--base-color), 100%, 63%);
+    --bg-primary-light: hsla(var(--base-color), 100%, 63%, 0.13);
+
+    /* sizes */
+    --fs-timer: clamp(4rem, 4rem + 10vw, 8.8rem);
+}
+
+/* global properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.hide {
+    display: none;
+}
+
+.play svg path,
+.pause svg path,
+.sound-on svg path {
+    fill: var(--primary-color);
+}
+
+svg {
+    width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+/* others propertyes */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-color);
+
+    display: grid;
+
+    background-color: var(--bg-color);
+}
+
+main {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    margin-top: 24.6rem;
+}
+
+#timer {
+    margin-bottom: 1.6rem;
+}
+
+#timer span {
+    font-size: var(--fs-timer);
+    line-height: 10.3rem;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(20rem, 10rem + 30vw, 25rem);
+
+    padding: 2.2rem 4rem;
+
+    border-radius: 999rem;
+    background: var(--bg-primary-light);
+}
+
+#controls .group-controls + .group-controls {
+    margin-left: 3.2rem;
+}
+
+footer {
+    position: absolute;
+    right: 4.2rem;
+    bottom: 3.2rem;
+}
